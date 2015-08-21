@@ -1,4 +1,4 @@
-<%= link_to "Idnet Rails", root_path, :class => 'brand' %>
+l<%= link_to "Idnet Rails", root_path, :class => 'brand' %>
 <ul class="nav">
   <% if user_signed_in? %>
     <li>
@@ -8,6 +8,9 @@
     <li><%= link_to 'Checkout', checkout_path %></li>
     <li>
     <%= link_to 'Logout', signout_path %>
+    </li>
+    <li>
+      <%= link_to 'Certification', "#", id: 'popup-cert' %>
     </li>
   <% else %>
     <li>
@@ -20,8 +23,12 @@
     <%= link_to 'Login through SDK',  "#", id: 'sdk-login' %>
     </li>
 
+
   <% end %>
   <li><%= link_to 'Activities', activities_path %></li>
   <li><%= link_to 'Application requests', app_requests_path%></li>
   <li><%= link_to 'Add friends', friend_requests_path%></li>
+  <li><%= link_to 'List', friends_list_path%></li>
+  <li><%= link_to 'Leaderboard', leaderboard_path%></li>
+  <li><%= link_to 'leaderboard_index', "#", id: 'leaderboard-index'%></li>
 </ul>

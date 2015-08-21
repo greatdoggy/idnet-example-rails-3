@@ -1,0 +1,12 @@
+<h1>Leaderboard#index</h1>
+<p>
+  <%= form_tag(leaderboard_update_path) do%>
+    <%= label_tag :pid, "Authorization"%>
+	<%= text_field_tag :pid %>
+    <%= label_tag :score, "Score"%>
+    <%= text_field_tag :score %>
+
+
+    <%= submit_tag "OK"%>
+   <%end %>
+</p>

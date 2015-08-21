@@ -17,13 +17,13 @@
       baseUrl: "<%= id_net_url('scripts') %>",
       deps: ['utils/es5-shim', 'easyXDM/json2'],
       shim: {
-        'utils/es5-shim': {
-          init: function(){
-          }
-        },
+        // 'utils/es5-shim': {
+        //   init: function(){
+        //   }
+        // },
         'easyXDM/easyXDM': {
           init: function(){
-            return this.easyXDM.noConflict();
+            return this.easyXDM
           }
         }
       }

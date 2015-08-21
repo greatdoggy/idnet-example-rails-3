@@ -12,3 +12,11 @@ $ ->
   $('#sdk-login').click (e) ->
     ID.login()
     e.preventDefault()
+  
+  $('#popup-cert').click (e) ->
+    ID.certification()
+    e.preventDefault()
+
+  $('#leaderboard-index').click (e) ->
+    ID.leaderboard()
+    e.preventDefault()
