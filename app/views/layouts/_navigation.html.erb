@@ -1,24 +1,34 @@
+<<<<<<< HEAD
 l<%= link_to "Idnet Rails", root_path, :class => 'brand' %>
+=======
+
+>>>>>>> origin/master
 <ul class="nav">
+  <li><%= link_to "Idnet Rails", root_path, :class => 'brand' %></li> |
+  <li>
+    <%= link_to 'Register via API',  new_user_path %>
+  </li> |
+
   <% if user_signed_in? %>
     <li>
-    Logged in as <%= current_user.name %>
-    </li>
-    <li><%= link_to 'Access private data', private_path %></li>
-    <li><%= link_to 'Checkout', checkout_path %></li>
-    <li>
-    <%= link_to 'Logout', signout_path %>
-    </li>
-    <li>
+    Logged in as <%= current_user.name %> (<%= current_user.email %>)
+    </li> |
+    <li><%= link_to 'Access private data', private_path %></li> |
+    <li><%= link_to 'Application requests', app_requests_path %></li> |
+    <li><%= link_to 'Add friends', friend_requests_path %></li> |
+    <li><%= link_to 'Checkout', checkout_path %></li> |
+    <li><%= link_to 'Orders', orders_path %></li> |
+    <li><%= link_to 'Logout', signout_path %></li> |
+        <li>
       <%= link_to 'Certification', "#", id: 'popup-cert' %>
     </li>
   <% else %>
     <li>
     <%= link_to 'Login through popup',  "#", id: 'popup-login' %>
-    </li>
+    </li> |
     <li>
     <%= link_to 'Login through smart button',  "#", id: 'smart-login' %>
-    </li>
+    </li> |
     <li>
     <%= link_to 'Login through SDK',  "#", id: 'sdk-login' %>
     </li>
@@ -31,4 +41,6 @@ l<%= link_to "Idnet Rails", root_path, :class => 'brand' %>
   <li><%= link_to 'List', friends_list_path%></li>
   <li><%= link_to 'Leaderboard', leaderboard_path%></li>
   <li><%= link_to 'leaderboard_index', "#", id: 'leaderboard-index'%></li>
+    </li> |
+  <% end %>
 </ul>
